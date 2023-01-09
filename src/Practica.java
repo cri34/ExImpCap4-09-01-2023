@@ -37,5 +37,25 @@ public class Practica {
 
             }
         }
+        System.out.println();
+    }
+    //prueba frase elimina ap apariciones de; la fra;se
+    public String extractAparicions(String frase, String extract){
+        String fraseSenseAp="";
+        String fraseActual="";
+        for (int i = 0; i < frase.length(); i++){
+            for (int e = 0; e < extract.length();e++){
+                if (i+e >= frase.length())
+                    break;
+                fraseActual +="" + frase.charAt(i+e);
+            }
+            if (fraseActual.equals(extract)){
+                i = i + extract.length()-1;
+                continue;
+            }
+            fraseSenseAp += frase.charAt(i);
+            fraseActual="";
+        }
+        return fraseSenseAp;
     }
 }
