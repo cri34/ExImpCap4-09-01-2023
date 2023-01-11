@@ -7,5 +7,7 @@ public class Main {
        p.printDigits(p.sumDigits("anfkadfh1akldf9kagdfhl10skdflsdf2"));
        p.printDigits(p.retSumAsciValue("abc12"));
        p.printInvText("casa");
+       p.printIsPal("anna");
+
     }
 }

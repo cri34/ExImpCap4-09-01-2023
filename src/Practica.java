@@ -94,4 +94,15 @@ public class Practica {
         System.out.println("frase "+ text);
         System.out.println("frase invertida: "+retTextInvertit(text));
     }
+    private boolean isPalindroma(String text){
+       for (int i=0; i < text.length()/2;i++){
+           if (text.charAt(i)!=text.charAt(text.length()-1-i))
+               return false;
+       }
+       return true;
+    }
+    public void printIsPal(String paraula){
+        System.out.println("frase "+ paraula+" palindroma : "+isPalindroma(paraula));
+
+    }
 }
