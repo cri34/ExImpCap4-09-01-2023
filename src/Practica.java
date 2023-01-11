@@ -82,4 +82,16 @@ public class Practica {
     public void printDigits(int d){
         System.out.println("suma de digitos de text = "+ d);
     }
+
+    private String retTextInvertit(String text){
+        String textInv = "";
+        for (int i = 0; i < text.length();i++){
+            textInv += text.charAt(text.length()-1-i);
+        }
+        return textInv;
+    }
+    public void printInvText(String text){
+        System.out.println("frase "+ text);
+        System.out.println("frase invertida: "+retTextInvertit(text));
+    }
 }
