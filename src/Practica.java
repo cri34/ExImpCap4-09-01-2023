@@ -58,4 +58,28 @@ public class Practica {
         }
         return fraseSenseAp;
     }
+    //3
+    public int sumDigits(String cadena){
+        final int fD='0';
+        final int lD='9';
+        int sum = 0;
+        for (int i = 0; i < cadena.length(); i++){
+            if (cadena.charAt(i) < fD || cadena.charAt(i) > lD){
+                continue;
+            }
+
+            sum += Character.getNumericValue(cadena.charAt(i));
+        }
+        return sum;
+    }
+    public int retSumAsciValue(String text){
+        int sum=0;
+        for (int i = 0;i < text.length();i++){
+            sum+=text.charAt(i);
+        }
+        return sum;
+    }
+    public void printDigits(int d){
+        System.out.println("suma de digitos de text = "+ d);
+    }
 }
