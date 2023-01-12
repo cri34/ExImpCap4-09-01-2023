@@ -105,4 +105,19 @@ public class Practica {
         System.out.println("frase "+ paraula+" palindroma : "+isPalindroma(paraula));
 
     }
+    private boolean isBisiesto(int any){
+        final boolean div4=any % 4 == 0;
+        final boolean div100=any % 100 == 0;
+        final boolean div400=any % 400 == 0;
+        if (div4 && !div100)
+            return true;
+        if (div100)
+            if (div400)
+                return true;
+
+        return false;
+    }
+    public void printBisiesto(int year){
+        System.out.printf(" %d is bisiesto: %b",year,isBisiesto(year));
+    }
 }

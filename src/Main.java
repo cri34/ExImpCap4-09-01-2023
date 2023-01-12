@@ -8,6 +8,7 @@ public class Main {
        p.printDigits(p.retSumAsciValue("abc12"));
        p.printInvText("casa");
        p.printIsPal("anna");
+       p.printBisiesto(4000);
 
     }
 }
