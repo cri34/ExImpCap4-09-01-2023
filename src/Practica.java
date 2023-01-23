@@ -110,7 +110,7 @@ public class Practica {
         final boolean div100=any % 100 == 0;
         final boolean div400=any % 400 == 0;
         if (div4 && !div100)
-            return true;
+            return true; 
         if (div100)
             if (div400)
                 return true;
