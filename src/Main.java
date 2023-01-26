@@ -9,6 +9,7 @@ public class Main {
        p.printInvText("casa");
        p.printIsPal("anna");
        p.printBisiesto(4000);
-
+       p.trianguloPascal(10);
+       p.printTP();
     }
 }

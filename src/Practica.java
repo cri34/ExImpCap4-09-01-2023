@@ -118,6 +118,52 @@ public class Practica {
         return false;
     }
     public void printBisiesto(int year){
-        System.out.printf(" %d is bisiesto: %b",year,isBisiesto(year));
+        System.out.printf(" %d is bisiesto: %b\n",year,isBisiesto(year));
+    }
+    private int [][] tP;
+    private void inicializarTP(int row){
+        System.out.printf("Triangulo Pascal: n = %d\n",row);
+        row++;
+        tP = new int[row][row];
+    }
+    private void tP(){
+        final int maxR=tP.length;
+        int valor;
+        for (int row=0; row < maxR;row++){
+            for (int col=0; col <= row;col++){
+                valor =  (int)(factorial(row)/( factorial(col) * factorial(row - col)));
+                tP[row][col] = valor;
+            }
+        }
+        }
+        private  long factorial(int n){
+        long r=1;
+        for (int i=0; i < n;i++){
+            r *= n-i;
+        }
+        return r;
+        }
+        public int [][] trianguloPascal(int row){
+            inicializarTP(row);
+            tP();
+            return tP;
+        }
+    public void printTP(){
+        for (int r=0 ; r < tP.length;r++){
+            System.out.print(genSpace(tP.length-1-r));
+            for (int c=0; c < tP[0].length;c++){
+                if (tP[r][c] == 0)
+                    break;
+                System.out.print(tP[r][c]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    private String genSpace(int nS){
+        String s="";
+        for (int i=0; i < nS ;i++)
+            s+=" ";
+        return s;
     }
 }
