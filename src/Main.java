@@ -13,5 +13,6 @@ public class Main {
        p.printTP();
        p.printMagicNum(0,30);
        System.out.println(p.calcPot(6,8));
+       p.primerosNNumerosPares(1,3);
     }
 }

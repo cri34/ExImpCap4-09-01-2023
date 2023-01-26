@@ -187,4 +187,23 @@ public class Practica {
         }
         return res;
     }
+    public void primerosNNumerosPares(int nInicial,int cantNumerosPar){
+        int countNPar=0;
+        int r=1;
+        if (cantNumerosPar < 1){
+            System.out.println("cantidad invalida debe ser superior o igual a 1");
+            return;
+        }
+        if (nInicial < 1){
+            System.out.println("numinicial invalido debe ser superior a 1");
+            return;
+        }
+        for (int i=nInicial;countNPar!= cantNumerosPar;i++){
+            if (i % 2 == 0){
+                countNPar++;
+               r *= i;
+            }
+        }
+        System.out.println(r);
+    }
 }
