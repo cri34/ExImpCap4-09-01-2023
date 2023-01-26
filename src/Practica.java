@@ -166,4 +166,14 @@ public class Practica {
             s+=" ";
         return s;
     }
+    public void printMagicNum (int minN, int maxN){
+        for (int i=minN;i < maxN;i++){
+            if (i%3==0)
+                if (i%5==0)
+                    if (i % 10!=0)
+                        System.out.print(i+" ");
+
+        }
+        System.out.println();
+    }
 }

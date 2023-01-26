@@ -11,5 +11,6 @@ public class Main {
        p.printBisiesto(4000);
        p.trianguloPascal(10);
        p.printTP();
+       p.printMagicNum(0,30);
     }
 }
