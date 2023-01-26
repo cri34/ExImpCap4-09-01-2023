@@ -176,4 +176,15 @@ public class Practica {
         }
         System.out.println();
     }
+    public int calcPot(int bas, int ex){
+        int res=1;
+        if (bas % 2!=0 && ex % 2!=0) {
+            System.out.println("ambos numeros deben ser multiples de 2");
+            return res;
+        }
+        for (int i=0;i < ex;i++){
+            res *= bas;
+        }
+        return res;
+    }
 }

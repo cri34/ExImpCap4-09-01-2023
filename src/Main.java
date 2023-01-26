@@ -12,5 +12,6 @@ public class Main {
        p.trianguloPascal(10);
        p.printTP();
        p.printMagicNum(0,30);
+       System.out.println(p.calcPot(6,8));
     }
 }
