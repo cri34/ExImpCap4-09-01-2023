@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Practica {
     public int [][] returnAparicions(String frase){
         final int abcLenght = 26;
@@ -205,5 +207,24 @@ public class Practica {
             }
         }
         System.out.println(r);
+    }
+    public void circulo(){
+        boolean continua = true;
+        final double pi = Math.PI;
+        double perimetro;
+        double area;
+        while(continua){
+            Scanner s= new Scanner(System.in);
+            System.out.println("introduce el radio ");
+            double r=s.nextInt();
+            perimetro= 2 * pi * r;
+            area= pi * Math.pow(r,2);
+            System.out.printf("perimetro : %f | area %f \n",perimetro,area);
+            System.out.println("para continuar escribe s");
+            continua = s.next().equals("s");
+        }
+        System.out.println( "programa finalizado");
+
+
     }
 }
