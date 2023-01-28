@@ -227,4 +227,34 @@ public class Practica {
 
 
     }
+    public int retNumSeqN(){
+        int n = retInput();
+        int num = retLastNumfibonacci(n);
+        printN(n,num);
+        return num;
+    }
+    private int retInput (){
+        Scanner s = new Scanner(System.in);
+        System.out.println("selecciona num iteracion");
+        int n = s.nextInt();
+        while (n < 1) {
+            System.out.println("numero de iteracion incorrecto debe ser positivo");
+            n = s.nextInt();
+        }
+        return n;
+    }
+    private void printN(int n,int num){
+        System.out.printf("num fibonacci equivalente a la iteracion %d es %d\n",n,num);
+    }
+    private int retLastNumfibonacci(int n){
+        int curN=0;
+        int nextNum=1;
+        int temp;
+        for (int i =1; i < n ;i++){
+            temp = curN;
+            curN = nextNum;
+            nextNum= curN+ temp;
+        }
+        return nextNum;
+    }
 }
