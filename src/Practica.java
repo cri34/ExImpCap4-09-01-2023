@@ -257,4 +257,37 @@ public class Practica {
         }
         return nextNum;
     }
+    public int maxComunDivisorInit(int num1, int num2){
+        int r=0;
+        if (num1 < 1 || num2 < 1) {
+            System.out.println("numeros deben ser superiores a 0");
+            return r;
+        }
+        return maxComunDivisor(num1,num2);
+    }
+    private int maxComunDivisor(int num1,int num2){
+        int maxCDiv = (descomposarMaxDivisors(num1) > descomposarMaxDivisors(num2))?descomposarMaxDivisors(num1):descomposarMaxDivisors(num2);
+       while(!(divisible(num1,maxCDiv) && divisible(num2,maxCDiv))){
+           maxCDiv--;
+       }
+        return maxCDiv;
+    }
+    private int descomposarMaxDivisors(int n){
+        int num = n;
+        int d=2;
+        while(num != 1){
+            if (!divisible(num,d)){
+                d++;
+                continue;
+            }
+            num /= d;
+        }
+        return d;
+    }
+    private boolean divisible(int n,int div){
+        if (div == 0)
+            return false;
+        return n % div == 0;
+    }
+
 }
