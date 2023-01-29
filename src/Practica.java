@@ -289,5 +289,29 @@ public class Practica {
             return false;
         return n % div == 0;
     }
+    public boolean numerosAmigos(int n1,int n2){
+        return retSumDivisor(n1)==n2 && retSumDivisor(n2)==n1;
+    }
+    public void printParejas(int n){
 
+        String numeros="";
+
+        for (int n1 = 1;n1 < n;n1++){
+            for (int n2 = n1;n2 < n;n2++) {
+                if (numerosAmigos(n1, n2)) {
+                    numeros += "par " + n1 + " ," + n2 + "| ";
+                }
+            }
+        }
+        System.out.println(numeros);
+    }
+    public int retSumDivisor(int num){
+        int sum = 0;
+        for (int d = 1; d <= num/2;d++) {
+            if (num % d == 0) {
+                sum += d;
+            }
+        }
+        return sum;
+    }
 }
