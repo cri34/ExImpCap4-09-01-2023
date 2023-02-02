@@ -333,5 +333,39 @@ public class Practica {
     public void printSumDivisor(int n){
         System.out.println(retSumaDiv(n));
     }
-
+//26
+    char [] l;
+    private void initArray(){
+        char firstL='a';
+        char lastL='j';
+        int maxlenght=lastL-firstL;
+        l= new char [maxlenght];
+        for (int i = 0; i < maxlenght;i++){
+            l[i]=(char)(firstL+i);
+        }
+    }
+    private boolean isVocal(int index){
+        char[] vocales={'a','e','i','o','u'};
+        for (int i =0;i < vocales.length;i++ )
+            if(l[index] == vocales[i]){
+                return true;
+            }
+       return false;
+    }
+    private void printArray(){
+        for (int i =0;i< l.length;i++){
+            System.out.print(l[i]+" ");
+        }
+        System.out.println();
+    }
+    public void sustVocales(){
+        initArray();
+        printArray();
+        for (int i =0; i < l.length;i++){
+            if (isVocal(i)){
+                l[i]='@';
+            }
+        }
+        printArray();
+    }
 }
