@@ -20,8 +20,10 @@ public class Main {
         System.out.println(p.retNumSeqN());
 
         System.out.println(p.maxComunDivisorInit(8500,850));
-        */
+
         System.out.println( p.retSumDivisor(220));
         p.printParejas(1000);
+        */
+        p.printSumDivisor(1092);
     }
 }

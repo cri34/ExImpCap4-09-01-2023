@@ -314,4 +314,24 @@ public class Practica {
         }
         return sum;
     }
+    //25
+    private int retSumaDiv(int n){
+        int num=n;
+        int d=2;
+        int sum=0;
+        while (num!=1){
+            if (num % d !=0){
+                d++;
+                continue;
+            }
+            num/=d;
+            sum+=d;
+
+        }
+        return sum;
+    }
+    public void printSumDivisor(int n){
+        System.out.println(retSumaDiv(n));
+    }
+
 }
