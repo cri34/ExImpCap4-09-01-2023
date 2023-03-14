@@ -29,4 +29,12 @@ public interface Output {
             out.append("\n");
         System.out.println(out);
     }
+    static void printArray(String [] array){
+        StringBuilder out= new StringBuilder();
+        for (int r =0;r< array.length;r++){
+            out.append(array[r]).append(" ");
+        }
+        out.append("\n");
+        System.out.println(out);
+    }
 }
