@@ -4,7 +4,6 @@ import interfaces.output.Output;
 public class Ex45 {
     public static void main(String[] args) {
         mostrarMinMax(4);
-
     }
     public static void mostrarMinMax(int lenght){
         int [] array = returnMatriz(lenght);

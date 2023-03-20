@@ -22,4 +22,7 @@ public interface Input {
         System.out.println("string input");
         return s.next();
     }
+    static int retRandNumber(int minNum,int maxNum){
+        return (int) (Math.random() * (maxNum - minNum+1) +minNum);
+    }
 }
